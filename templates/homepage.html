@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homepage</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+	<h1>This is the homepage</h1>
+	<nav>
+		<ul>
+			<li>
+				<form class="speek-link" action="/doctor/" method="post">
+					{% csrf_token %}
+					<button type="submit">Speek</button>
+				</form>
+			</li>
+		</ul>
+	</nav>
+</body>
+</html>
